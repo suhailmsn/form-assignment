@@ -1,0 +1,130 @@
+<html>
+<title>Sample Assignment</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CustomStyleSheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>   
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>Agent Registration</h1>
+        </div>
+        <ul class="register-tab">
+            <li class="current" data-tab="tab-1"><a>Personal Details</a></li>
+            <li data-tab="tab-2"><a>Agency Details</a></li>
+            <li data-tab="tab-3"><a>Contact Person Details</a></li>
+            <li data-tab="tab-4"><a>Work Order Scope</a></li>
+        </ul>
+        <div class="container">
+            <div id="tab-2" class="tab-content">
+            <h2>Profile Information</h2>
+            <form>
+                    <label for="agency-name">Agency Name<span>*</span></label>
+                    <label for="agency-type">Agency Type<span>*</span></label>
+                    <label for="Password">Password<span>*</span></label>
+                    <input type="text" id="agency-name" required="required" pattern="^[a-zA-Z0-9 ]*$" />
+                    <!-- <span class="valid-feedback">
+                    </span>
+                    <span class="invalid-feedback">
+                        Invalid Agency Name
+                    </span> -->
+                    <select id="agency-type">
+                        <option value="1">Agent</option>
+                        <option value="2">Agent 2</option>
+                        <option value="3">Agent 3</option>
+                        <option value="4">Agent 4</option>
+                    </select>
+                    <input type="password" id="Password" required="required" minlength="6" />
+                    <!-- <span class="valid-feedback">
+                    </span>
+                    <span class="invalid-feedback">
+                        Password must contain at least 6 characters.
+                    </span> -->
+                    <label for="">Address<span>*</span></label>
+                    <div class=city-state>
+                        <label for="city">City<span>*</span></label>
+                        <label for="state">State<span>*</span></label>
+                    </div>
+                    <label for="contact">Telephone Number</label>
+                    <textarea id="address" rows="1">
+                    </textarea>
+                    <div class=city-state>
+                        <input type="text"  id="city" required="required" pattern="^[a-zA-Z]*$" />
+                        <!-- <span class="valid-feedback">
+                        </span>
+                        <span class="invalid-feedback">
+                            Enter the city Name.
+                        </span> -->
+                        
+                        <input type="text"  id="State" required="required" pattern="^[a-zA-Z]*$" />
+                    </div>
+                    <!-- <span class="valid-feedback">
+                    </span>
+                    <span class="invalid-feedback">
+                        Enter the state Name.
+                    </span> -->
+                    
+                    <input type="number" id="contact" required="required" pattern="^[0-9]*$" />
+                    <!-- <span class="valid-feedback">
+                    </span>
+                    <span class="invalid-feedback">
+                        Invalid phone number.
+                    </span> -->
+                    <label for="contact-toll-free">Toll-Free Number<span>*</span></label>
+                    <label for="email">Email ID<span>*</span></label>
+                    <label for="website">Website<span>*</span></label>
+                    <input type="number" id="contact-toll-free" required="required" pattern="^[0-9]*$" />
+                    <!-- <span class="valid-feedback">
+                    </span>
+                    <span class="invalid-feedback">
+                        Invalid phone number.
+                    </span> -->
+                    
+                    <input type="email" id="email" required="required" />
+                    <!-- <span class="valid-feedback"> -->
+                    <!-- </span>
+                    <span class="invalid-feedback">
+                        Invalid Email Address.
+                    </span> -->
+                    
+                    <input type="url" id="website" required="required" />
+                    <!-- <span class="valid-feedback"> -->
+                    <!-- </span>
+                    <span class="invalid-feedback">
+                        Invalid URL.
+                    </span> -->
+                    <label for="company-name">Company Name<span>*</span></label>
+                    <label for="office-space">Office Space</label>
+                    <label for="logo">Company Logo<span>*</span></label>
+                    <input type="text" id="company-name" required="required"/>
+                    <ul class="radio">
+                    <li>
+                    <input type="radio" id="test1" name="radio-group" checked>
+                    <label for="test1">Owned</label>
+                    </li>
+                    <li>
+                    <input type="radio" id="test2" name="radio-group">
+                    <label for="test2">Rental</label>
+                    </li>
+                    </ul>
+                    <input type="file" id="logo" required> 
+                    <span id="asterisk">In order to access your registration, we ask you to provide the following information. Please note that all the fields marked with an asterisk(*) are required.</span> 
+                <div class="button-row"> 
+                    <button type="reset" class="cancel-btn">CANCEL</button>
+                    <button type="submit" class="continue-btn">CONTINUE</button>
+                    </div>
+            
+    
+            </form>
+            </div>
+        
+            </div>
+        </div>
+</body>
+</html>
+
+
