@@ -22,101 +22,83 @@
         <div class="container">
             <div id="tab-2" class="tab-content">
             <h2>Profile Information</h2>
-            <form>
+            <form class="needs-validation">
+                <div class="flex-column">
                     <label for="agency-name">Agency Name<span>*</span></label>
-                    <label for="agency-type">Agency Type<span>*</span></label>
-                    <label for="Password">Password<span>*</span></label>
                     <input type="text" id="agency-name" required="required" pattern="^[a-zA-Z0-9 ]*$" />
-                    <!-- <span class="valid-feedback">
-                    </span>
-                    <span class="invalid-feedback">
-                        Invalid Agency Name
-                    </span> -->
+                </div>
+                <div class="flex-column">
+                    <label for="agency-type">Agency Type<span>*</span></label>
                     <select id="agency-type">
                         <option value="1">Agent</option>
                         <option value="2">Agent 2</option>
                         <option value="3">Agent 3</option>
                         <option value="4">Agent 4</option>
                     </select>
+                </div>
+                <div class="flex-column">
+                    <label for="Password">Password<span>*</span></label>    
                     <input type="password" id="Password" required="required" minlength="6" />
-                    <!-- <span class="valid-feedback">
-                    </span>
-                    <span class="invalid-feedback">
-                        Password must contain at least 6 characters.
-                    </span> -->
+                </div>
+                <div class="flex-column">
                     <label for="">Address<span>*</span></label>
-                    <div class=city-state>
-                        <label for="city">City<span>*</span></label>
-                        <label for="state">State<span>*</span></label>
-                    </div>
-                    <label for="contact">Telephone Number</label>
                     <textarea id="address" rows="1">
                     </textarea>
+            </div>
+                
                     <div class=city-state>
-                        <input type="text"  id="city" required="required" pattern="^[a-zA-Z]*$" />
-                        <!-- <span class="valid-feedback">
-                        </span>
-                        <span class="invalid-feedback">
-                            Enter the city Name.
-                        </span> -->
-                        
-                        <input type="text"  id="State" required="required" pattern="^[a-zA-Z]*$" />
+                        <div class="flex-column">
+                            <label for="city">City<span>*</span></label>
+                            <input type="text"  id="city" required="required" pattern="^[a-zA-Z]*$" /> 
+                        </div>
+                        <div class="flex-column">
+                            <label for="state">State<span>*</span></label>
+                            <input type="text"  id="State" required="required" pattern="^[a-zA-Z]*$" />
+                        </div>
                     </div>
-                    <!-- <span class="valid-feedback">
-                    </span>
-                    <span class="invalid-feedback">
-                        Enter the state Name.
-                    </span> -->
-                    
+                <div class="flex-column">
+                    <label for="contact">Telephone Number</label>   
                     <input type="number" id="contact" required="required" pattern="^[0-9]*$" />
-                    <!-- <span class="valid-feedback">
-                    </span>
-                    <span class="invalid-feedback">
-                        Invalid phone number.
-                    </span> -->
+                </div>
+                <div class="flex-column">
                     <label for="contact-toll-free">Toll-Free Number<span>*</span></label>
-                    <label for="email">Email ID<span>*</span></label>
-                    <label for="website">Website<span>*</span></label>
                     <input type="number" id="contact-toll-free" required="required" pattern="^[0-9]*$" />
-                    <!-- <span class="valid-feedback">
-                    </span>
-                    <span class="invalid-feedback">
-                        Invalid phone number.
-                    </span> -->
-                    
-                    <input type="email" id="email" required="required" />
-                    <!-- <span class="valid-feedback"> -->
-                    <!-- </span>
-                    <span class="invalid-feedback">
-                        Invalid Email Address.
-                    </span> -->
-                    
+                </div>
+                <div class="flex-column">
+                    <label for="email">Email ID<span>*</span></label>
+                    <input type="email" id="email" required="required" /> 
+                </div>
+                <div class="flex-column">
+                    <label for="website">Website<span>*</span></label>                 
                     <input type="url" id="website" required="required" />
-                    <!-- <span class="valid-feedback"> -->
-                    <!-- </span>
-                    <span class="invalid-feedback">
-                        Invalid URL.
-                    </span> -->
+                </div>
+                <div class="flex-column">
                     <label for="company-name">Company Name<span>*</span></label>
-                    <label for="office-space">Office Space</label>
-                    <label for="logo">Company Logo<span>*</span></label>
                     <input type="text" id="company-name" required="required"/>
+                </div>
+                <div class="flex-column">
+                    <label for="office-space">Office Space</label>
                     <ul class="radio">
-                    <li>
-                    <input type="radio" id="test1" name="radio-group" checked>
-                    <label for="test1">Owned</label>
-                    </li>
-                    <li>
-                    <input type="radio" id="test2" name="radio-group">
-                    <label for="test2">Rental</label>
-                    </li>
+                        <li>
+                        <input type="radio" id="test1" name="radio-group" checked>
+                        <label for="test1">Owned</label>
+                        </li>
+                        <li>
+                        <input type="radio" id="test2" name="radio-group">
+                        <label for="test2">Rental</label>
+                        </li>
                     </ul>
+                </div>
+                <div class="flex-column">
+                    <label for="logo">Company Logo<span>*</span></label> 
                     <input type="file" id="logo" required> 
+                </div>
+              
                     <span id="asterisk">In order to access your registration, we ask you to provide the following information. Please note that all the fields marked with an asterisk(*) are required.</span> 
                 <div class="button-row"> 
                     <button type="reset" class="cancel-btn">CANCEL</button>
-                    <button type="submit" class="continue-btn">CONTINUE</button>
-                    </div>
+                    <button type="submit" class="continue-btn">&nbsp;&nbsp;&nbsp;CONTINUE</button>
+                </div>
             
     
             </form>

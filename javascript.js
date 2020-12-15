@@ -9,16 +9,9 @@ $(document).ready(function () {
 		$(this).addClass('current');
 		$("#"+tab_id).addClass('current');
 	})
-
-})
- $(document).on("submit", ".needs-validation", validate);
         $('form').on('submit', function () {
+            $('ul.register-tab li').addClass('submitted');
             alert('submitted');
         });
-        $(".needs-validation input").blur(validate);
-        function validate(event) {
-            if ($(".needs-validation")[0].checkValidity() == false) {
-                event.preventDefault();
-            }
-            $(".needs-validation")[0].classList.add("was-validated");
-        }
+
+    })
