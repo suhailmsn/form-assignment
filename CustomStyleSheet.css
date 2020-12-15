@@ -34,7 +34,6 @@ label span{
     font-size: 16px;
 }
 label{
-    width: 30%;
     font-size: 12px;
     font-weight: 700;
     color: rgb(87,89,97);
@@ -61,6 +60,11 @@ label{
 
 
 }
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
 .tab-content{
   	opacity: 0;
 }
@@ -68,9 +72,9 @@ label{
     opacity: 1 !important;
 }
 .register-tab li.current{
-    background: rgb(252,255,252);
-    color: rgb(68,155,85);
-    border-bottom:3px solid rgb(68,155,85);
+    
+    color: rgb(106,193,123);
+    border-bottom:3px solid rgb(106,193,123);;
     background: url("svg/circle.svg") no-repeat;
     background-size: 20px;
     background-position: 10% 50%;
@@ -88,13 +92,11 @@ label{
     border-left: none;
 }
 input, select {
-  width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
+    height: 53px;
 }
 select {
  -webkit-appearance: none;
@@ -107,20 +109,23 @@ select option{
     font-weight: bold;
 }
 textarea{
-    width: 30%;
      box-shadow: none;
     resize: none;
    border: 1px solid #ccc;
     border-radius: 3px;
-     padding: 12px 20px;
+     padding: 19px 20px;
+    margin-top:9px; 
+}
+.city-state .flex-column{
+   width: 48%;    
 }
 .city-state{
-    display: flex;
+    display: flex;  
     justify-content: space-between;
     width: 30%;
 }
 .city-state label,.city-state input{
-    width: 48%;
+    width: 100%;
 }
 .radio label{
     position: relative;
@@ -148,6 +153,8 @@ input[type="file"]::-webkit-file-upload-button {
 }
 input[type="file"]{
     border-radius: 7px;
+    height: 55px;
+    padding-bottom: 30px;
 }
 
 button{
@@ -156,11 +163,10 @@ button{
 .radio{
     display: flex;
     justify-content: space-between;
-    width:30%;
     list-style-type: none;
     background-color: rgb(246,245,249);
     border-radius: 7px; 
-    height: 57px;
+    height: 55px;
     margin-top: 10px;
     align-items: center;
 }
@@ -173,8 +179,8 @@ button{
 form{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: baseline;
+    justify-content: space-between;
 }
 .button-row{
     display: flex;
@@ -194,15 +200,19 @@ form{
 }
 .continue-btn{
     background-color: #709d61; 
+    background: url("svg/right.svg") no-repeat;
+    background-size: 20px;
+    background-position: 80% 50%;
     border: none;
     border-radius: 3px;
     color: #ffffff;
-    text-align: center;
+    text-align: start;
     font-size: 16px;
     padding: 12px 20px;
     margin-top: 20px;
     width: 180px;
-    background-color: rgb(113,186,128)
+    background-color: rgb(106,193,123);
+    box-shadow: 0px 3px rgb(208,209,211,0.4);
 }
 .cancel-btn{
     background-color: #709d61; 
@@ -215,6 +225,7 @@ form{
     margin-top: 20px;
     width: 130px;
     background-color: rgb(180,186,199);
+    box-shadow: 0px 3px rgb(208,209,211,0.4);
     margin-right: 15px;
 }
 #logo{
@@ -284,8 +295,33 @@ button{
 
 
 @media only screen and (max-width: 1080px) {
+    
+    .main-container{
+        max-width: 800px;
+        margin:0px auto;
+        background-color:white;
+        border-radius: 7px;
 
-
+    }
+    h1,h2{
+        text-align: center;
+    }
+  
+    .flex-column{
+        width: 48%;
+    }
+     .city-state{
+        width: 48%;
+    }
+    .button-row{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cancel-btn{
+        width: 180px;
+    }
 
 }
 
@@ -296,6 +332,27 @@ button{
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
+
+     .main-container{
+        max-width: 660px;
+        margin:0px auto;
+        background-color:white;
+        border-radius: 7px;
+
+    }
+      form{
+        justify-content: center;
+    }
+     .flex-column{
+        width: 90%;
+    }
+      .city-state{
+        width: 90%;
+    }
+    #asterisk{
+        text-align: center;
+        width: 90%;
+    }
   
 }
